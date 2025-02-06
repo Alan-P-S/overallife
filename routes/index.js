@@ -9,5 +9,8 @@ router.get('/',(req,res)=>{
 router.get('/diploma',(req,res)=>{
     res.render('diploma')
 })
+router.get('/cet',(req,res)=>{
+    res.render('cet')
+})
 
 module.exports = router;
