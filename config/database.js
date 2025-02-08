@@ -1,9 +1,10 @@
 const mysql = require('mysql2');
+require('dotenv').config();
 const db = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'root'
-    database: 'mysite',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password:  process.env.DB_PASS,
+    database:  process.env.DB_NAME,
     waitForConnections: true,
     connectionLimit: 10,
     maxIdle: 10, // max idle connections, the default value is the same as `connectionLimit`
@@ -14,12 +15,13 @@ const db = mysql.createPool({
 });
 
 
-db.connect((err)={
-    if(err){
+db.getConnection((err,connection)=>{
+    if (err) {
         console.log("Database connection error: ",err);
     }
     else{
         console.log("Database connected");
+        connection.release();
     }
 })
 
