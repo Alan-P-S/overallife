@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    text-align: center;
+    color: white;
+    background: black;
+    overflow: hidden;
+}
+
+/* Animated Background */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(10,10,10,1) 10%, black 90%);
+    z-index: -1;
+    animation: pulse 6s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { background: radial-gradient(circle, rgba(10,10,10,1) 10%, black 90%); }
+    100% { background: radial-gradient(circle, rgba(20,20,20,1) 10%, black 90%); }
+}
+
+/* Header */
+header {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px cyan;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 32px;
+    color: cyan;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Sections */
+section {
+    margin: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px cyan;
+}
+
+h2 {
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+/* Contact Links */
+a {
+    color: cyan;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 10px cyan;
+}
