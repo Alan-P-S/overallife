@@ -6,6 +6,11 @@ router.get('/',(req,res)=>{
     res.render('home');
 })
 
+router.get('/home', (req, res)=>{
+
+        res. render('index');
+})
+
 router.get('/diploma',(req,res)=>{
     res.render('diploma')
 })
