@@ -24,4 +24,4 @@ db.connect((err)={
 })
 
 
-module.exports = 
+module.exports = db;
